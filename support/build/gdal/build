@@ -1,0 +1,13 @@
+#!/bin/sh
+
+workspace_dir=$1
+output_dir=$2
+
+curl http://download.osgeo.org/gdal/$VERSION/gdal-$VERSION.tar.gz -s -o - | tar zxf -
+
+ls
+
+cd gdal-$VERSION
+./configure --prefix=$output_dir
+make
+make install

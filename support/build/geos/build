@@ -1,0 +1,11 @@
+#!/bin/sh
+
+workspace_dir=$1
+output_dir=$2
+
+curl http://download.osgeo.org/geos/geos-$VERSION.tar.bz2 -s -o - | tar xjf -
+
+cd geos-$VERSION
+./configure --prefix=$output_dir
+make
+make install

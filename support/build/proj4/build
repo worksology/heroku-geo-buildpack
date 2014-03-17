@@ -1,0 +1,11 @@
+#!/bin/sh
+
+workspace_dir=$1
+output_dir=$2
+
+curl http://download.osgeo.org/proj/proj-$VERSION.tar.gz -s -o - | tar zxf -
+
+cd proj-$VERSION
+./configure --prefix=$output_dir
+make
+make install
