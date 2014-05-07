@@ -98,7 +98,7 @@ APP_GDAL="/app/$VENDORED_GDAL"
 APP_PROJ="/app/$VENDORED_PROJ"
 
 # Setup environment variables
-set-env GEOS_LIBRARY_PATH "$APP_GEOS/lib"
+set-env GEOS_LIBRARY_PATH "$APP_GEOS/lib/libgeos_c.so"
 set-env GDAL_LIBRARY_PATH "$APP_GDAL/lib"
 set-env PROJ4_LIBRARY_PATH "$APP_PROJ/lib"
 set-env GDAL_DATA "$APP_GDAL/share/gdal"
